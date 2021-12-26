@@ -2,6 +2,7 @@ package com.dktechub.apkextractor2;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 
@@ -29,9 +30,23 @@ public class Apploader extends AsyncTask<Void,Void,ArrayList<App>> {
         List<ApplicationInfo> apps = packageManager.getInstalledApplications(0);
         for(ApplicationInfo temp:apps)
         {   if(showSystem||(temp.flags&ApplicationInfo.FLAG_SYSTEM)==0)
-            loaded.add(new App(packageManager.getApplicationLabel(temp) +".apk", temp.sourceDir, temp.loadIcon(packageManager), new File(temp.sourceDir).length()));
+            {
+                String appName = (String) packageManager.getApplicationLabel(temp);
+                String packageName = temp.packageName;
+                try{
+                    PackageInfo packageInfo = packageManager.getPackageInfo(packageName,0);
+                    String versionName = packageInfo.versionName;
+                    String version = String.valueOf(packageInfo.versionCode);
+                    appName = appName+'_'+versionName+'_'+version;
+                }catch (Exception ignored)
+                {
+                }
+                loaded.add(new App(appName +".apk", temp.sourceDir, temp.loadIcon(packageManager), new File(temp.sourceDir).length()));
+
+            }
+
         }
-        //Collections.sort(loaded);
+
         Collections.sort(loaded,new SavedAsynkLoader.Comparator());
         return loaded;
     }
