@@ -31,32 +31,12 @@
             android:paddingBottom="16dp">
 
             <TextView
-                android:id="@+id/save"
+                android:id="@+id/install"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_side"
                 android:layout_marginLeft="@dimen/margin_side"
-                android:layout_marginEnd="@dimen/margin_side"
-                android:layout_marginRight="@dimen/margin_side"
-                android:background="@drawable/circuler_background"
-                android:drawablePadding="16dp"
-
-                android:elevation="16dp"
-                android:gravity="center|start"
-                android:padding="16dp"
-                android:text="Save to internal storage"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:drawableLeftCompat="@drawable/ic_baseline_save_alt_24"
-                tools:targetApi="lollipop" />
-
-            <TextView
-                android:id="@+id/share3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_side"
-                android:layout_marginLeft="@dimen/margin_side"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="@dimen/margin_side"
                 android:layout_marginRight="@dimen/margin_side"
                 android:background="@drawable/circuler_background"
@@ -64,14 +44,14 @@
                 android:elevation="16dp"
                 android:gravity="center|start"
                 android:padding="16dp"
-                android:text="Uninstall"
+                android:text="Install"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:drawableLeftCompat="@drawable/ic_baseline_insights_24"
+                app:drawableLeftCompat="@drawable/ic_baseline_adb_24"
                 tools:targetApi="lollipop" />
 
             <TextView
-                android:id="@+id/share2"
+                android:id="@+id/share"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_side"
@@ -92,22 +72,24 @@
                 tools:targetApi="lollipop" />
 
             <TextView
-                android:id="@+id/share"
+                android:id="@+id/delete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_side"
                 android:layout_marginLeft="@dimen/margin_side"
                 android:layout_marginEnd="@dimen/margin_side"
                 android:layout_marginRight="@dimen/margin_side"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/circuler_background"
                 android:drawablePadding="16dp"
+
                 android:elevation="16dp"
                 android:gravity="center|start"
                 android:padding="16dp"
-                android:text="Uninstall"
+                android:text="Delete from internal storage"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:drawableLeftCompat="@drawable/ic_baseline_app_blocking_24"
+                app:drawableLeftCompat="@drawable/ic_baseline_delete_forever_24"
                 tools:targetApi="lollipop" />
 
         </LinearLayout>
