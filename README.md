@@ -3,6 +3,7 @@
 **APK Saver X** is a fast, simple, and powerful Android utility app that allows you to **extract APK files from installed applications** on your device.  
 The extracted APKs can be saved as a backup or shared with other devices for later installation.
 
+**Alert** This app was developed and tested upto Android 10 and is not maintained currently, might not work on latest OSs.
 ---
 
 ## 📱 About APK Saver X
